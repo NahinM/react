@@ -21,12 +21,12 @@ function Games() {
         <div className="d-flex flex-wrap p-3 gap-3">
             {
                 games.map((game) => 
-                    <div className="card" style={{ width: "18rem", height: "23rem" }}>
-                        <img src="..." className="card-img-top" alt="..." />
+                    <div className="card" style={{ width: "300px", height: "400px" }}>
+                        <img src="..." className="card-img-top" alt={game.name} height={150} width={300} />
                         <div className="card-body">
                             <h5 className="card-title">{game.name}</h5>
                             <p className="card-text">{game.description}</p>
-                            <a href={game.link} className="btn btn-primary">Go somewhere</a>
+                            <a href={game.link} className="btn btn-primary">Play</a>
                         </div>
                     </div>
                 )
