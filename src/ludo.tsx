@@ -289,7 +289,7 @@ class Game{
 };
 
 function Ludo() {
-    const [board , setBoard] = useState<string[][]>(Array(225).fill([]));
+    const [board , setBoard] = useState<string[][]>(Array.from({length: 225}, () => [] as string[]));
     const [dice,setDice] = useState(1);
     const [diceRolled, setDiceRolled] = useState(false);
     const [currentPlayer, setCurrentPlayer] = useState(0);
@@ -298,7 +298,7 @@ function Ludo() {
     const game = useRef(new Game());
     
     useEffect(() => {
-        let newBoard = Array.from({length:225}, () => []);
+        let newBoard: string[][] = Array.from({length:225}, () => [] as string[]);
         for(let {color, position} of game.current.getPawns()){
             newBoard[position].push(color);
         }
