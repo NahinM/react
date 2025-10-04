@@ -1,0 +1,80 @@
+:root{
+    --sizeD: 40px;
+    --fontD: 25px;
+    --sizeP: 25px;
+    --fontP: 16px;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(15, var(--sizeD));
+    grid-template-rows: repeat(15, var(--sizeD));
+    justify-self: center;
+}
+
+.dice{
+    width:calc(var(--sizeD)*2);
+    height:calc(var(--sizeD)*2);
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 3;
+}
+
+.winBanner{
+    width:calc(var(--sizeD)*2);
+    height:calc(var(--sizeD)*2);
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 3;
+    background-color: white;
+}
+
+.cell{
+    border: 1px solid black;
+    width: var(--sizeD);
+    height: var(--sizeD);
+    box-sizing: border-box;
+    font-size: var(--fontD);
+    text-align: center;
+    position: relative;
+}
+
+.pawn{
+    position: absolute;
+    top:5px;
+    stroke: black;
+    stroke-width: 20;
+    z-index: 2;
+}
+
+.star{
+    position: absolute;
+    width: var(--sizeD);
+    height: var(--sizeD);
+    stroke: rgb(246, 255, 0);
+    fill: none;
+    stroke-width: 8;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .board {
+        grid-template-columns: repeat(15, var(--sizeP));
+        grid-template-rows: repeat(15, var(--sizeP));
+    }
+
+    .cell {
+        width: var(--sizeP);
+        height: var(--sizeP);
+        font-size: var(--fontP);
+    }
+    .star{
+        width: var(--sizeP);
+        height: var(--sizeP);
+    }
+    
+}

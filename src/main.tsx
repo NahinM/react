@@ -4,6 +4,7 @@ import App from './App.tsx'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import Games from './games.tsx'
 import TicTacToe from './tictactoe.tsx'
+import Ludo from './ludo.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
@@ -11,6 +12,7 @@ createRoot(document.getElementById('root')!).render(
       <Route path="/" element={<App />} />
       <Route path="/games" element={<Games />} />
       <Route path="/tictactoe" element={<TicTacToe />} />
+      <Route path="/ludo" element={<Ludo />} />
     </Routes>
   </BrowserRouter>,
 )
