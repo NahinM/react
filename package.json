@@ -1,9 +1,9 @@
 {
+  "homepage": "https://NahinM.github.io/react",
   "name": "mysite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://NahinM.github.io/react/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
